@@ -1,0 +1,79 @@
+$principal: #464646;
+$secundario: #FCE8DB;
+$ecento: #272A48;
+//media query
+$cel: 479px;
+$nocel: 479px;
+$tableta: 768px;
+$tableta-land: 1024px;
+$hd: 1600px;
+$hdplus:1990px;
+
+@mixin cel {
+  @media (max-width: #{$cel}) {
+    @content;
+  }
+}
+
+@mixin nocel {
+  @media (min-width: #{$nocel}) {
+    @content;
+  }
+}
+
+@mixin tableta_land {
+  @media (min-width: #{$tableta-land}) and (max-width: #{$hd - 1px}) {
+    @content;
+  }
+}
+
+@mixin tableta {
+  @media (min-width: #{$tableta - 1px}) and (max-width: #{$tableta-land - 1px}) {
+    @content;
+  }
+}
+
+@mixin hd {
+  @media (min-width: #{$hd}) {
+    @content;
+  }
+}
+@mixin hdplus {
+  @media (min-width: #{$hdplus}) {
+    @content;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: [pantalla-start] 3.7vw [extra-start] 3.7vw [contenido-start] 1fr [contenido-end] 3.7vw [extra-end] 3.7vw [pantalla-end];
+  @include hd {
+    grid-template-columns: [pantalla-start] 1.5vw [extra-start] 1.5vw [contenido-start] 1fr [contenido-end] 1.5vw [extra-end] 1.5vw [pantalla-end];
+  }
+  @include hdplus {
+    grid-template-columns: [pantalla-start] 3.4vw [extra-start] 3.4vw [contenido-start] 1fr [contenido-end] 3.4vw [extra-end] 3.4vw [pantalla-end];
+  }
+}
+.contenido > * {
+  grid-column: contenido;
+}
+.extra > * {
+  grid-column: extra;
+}
+.pantalla > * {
+  grid-column: pantalla;
+}
+.pantalla-izq > * {
+  border: solid;
+  grid-column: pantalla-start / contenido-end;
+  @include cel{
+    grid-column: contenido-start /contenido-end;
+  }
+}
+.pantalla-der > * {
+  border: solid;
+  grid-column: contenido-start / pantalla-end;
+  @include cel{
+    grid-column: contenido-start /contenido-end;
+  }
+}

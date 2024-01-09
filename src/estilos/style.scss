@@ -1,0 +1,63 @@
+@forward 'variables';
+@forward 'reset';
+@forward 'anima';
+
+// aqui seran los estilos globales para usar en los componentes
+
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&family=Montserrat:wght@400;700&family=Noto+Sans:wght@100;400;900&display=swap');
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: clamp(3rem, 4vw, 8rem);
+  letter-spacing: -2px;
+  span{
+    color: red;
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a.active {
+  color: red;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h2{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  padding-bottom: 1rem;
+  color: #2a209e;
+}
+h3{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding-bottom: 1rem;
+}
+
+.btn {
+  background-color: #ec1b72;
+  color: #fff;
+  padding: 0.5em 2em;
+  font-size: 1.5rem;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #f7f7f7;
+}
