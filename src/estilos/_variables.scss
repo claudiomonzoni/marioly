@@ -1,6 +1,7 @@
-$principal: #464646;
-$secundario: #FCE8DB;
-$ecento: #272A48;
+$beige: #EBC2A5;
+$azul: #0052FF;
+$azul-marino: #151460;
+$gris: #E9EBFA;
 //media query
 $cel: 479px;
 $nocel: 479px;
@@ -64,14 +65,12 @@ $hdplus:1990px;
   grid-column: pantalla;
 }
 .pantalla-izq > * {
-  border: solid;
   grid-column: pantalla-start / contenido-end;
   @include cel{
     grid-column: contenido-start /contenido-end;
   }
 }
 .pantalla-der > * {
-  border: solid;
   grid-column: contenido-start / pantalla-end;
   @include cel{
     grid-column: contenido-start /contenido-end;

@@ -1,12 +1,9 @@
-@forward 'variables';
-@forward 'reset';
-@forward 'anima';
-
+@use "variables" as *;
+@use "reset" as *;
+@use "anima" as *;
 // aqui seran los estilos globales para usar en los componentes
 
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&family=Montserrat:wght@400;700&family=Noto+Sans:wght@100;400;900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&family=Montserrat:wght@400;700&family=Noto+Sans:wght@100;400;900&display=swap");
 
 html,
 body {
@@ -15,12 +12,17 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #fff;
   scroll-behavior: smooth;
+  font-size: clamp(1rem, 18px, 4rem);
+  @include cel {
+    border: solid;
+  }
 }
 h1 {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: clamp(3rem, 4vw, 8rem);
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(2rem, 3vw, 6rem);
   letter-spacing: -2px;
-  span{
+  color: $azul-marino;
+  span {
     color: red;
   }
 }
@@ -36,16 +38,17 @@ a.active {
   scroll-behavior: smooth;
 }
 
-h2{
-  font-family: 'Noto Sans', sans-serif;
+h2 {
+  font-family: "Noto Sans", sans-serif;
   font-size: clamp(2rem, 2.5vw, 3rem);
   padding-bottom: 1rem;
-  color: #2a209e;
+  color: $azul-marino;
 }
-h3{
-  font-family: 'Noto Sans', sans-serif;
+h3 {
+  font-family: "Noto Sans", sans-serif;
   font-size: clamp(1rem, 2vw, 2rem);
   padding-bottom: 1rem;
+  color: $azul-marino;
 }
 
 .btn {
@@ -60,4 +63,58 @@ h3{
 .btn:hover {
   background-color: #000;
   color: #f7f7f7;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  border-bottom: solid red 1px;
+  z-index: 100;
+  ul {
+    justify-content: space-between;
+    display: inherit;
+    li {
+      padding: 1rem;
+    }
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+
+#hero {
+  display: flex;
+  .izq,
+  .der {
+    display: inherit;
+    flex: 1;
+  }
+  .izq {
+    height: 80dvh;
+    justify-content: center;
+    align-items: center;
+    .bandeja {
+      width: 70%;
+    }
+  }
+  .der {
+    justify-content: right;
+    align-items: center;
+    z-index: 3;
+    img {
+      width: 100%;
+    }
+  }
+  &:before {
+    content: "";
+    background: $beige;
+    clip-path: polygon(28% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 45%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
 }
