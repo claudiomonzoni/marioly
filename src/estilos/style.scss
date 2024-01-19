@@ -13,9 +13,7 @@ body {
   background-color: #fff;
   scroll-behavior: smooth;
   font-size: clamp(1rem, 18px, 4rem);
-  @include cel {
-    border: solid;
-  }
+
 }
 h1 {
   font-family: "Noto Sans", sans-serif;
@@ -121,7 +119,7 @@ nav {
     right: 0;
     z-index: 0;
     @include cel{
-      top: 90%;
+      top: 80%;
       height: 30%;
       width: 100%;
       clip-path: polygon(0% 0, 100% 0, 70% 100%, 0% 100%);

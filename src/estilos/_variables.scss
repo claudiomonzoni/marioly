@@ -66,13 +66,13 @@ $hdplus:1990px;
 }
 .pantalla-izq > * {
   grid-column: pantalla-start / contenido-end;
-  @include cel{
-    grid-column: contenido-start /contenido-end;
-  }
+  // @include cel{
+  //   grid-column: contenido-start /contenido-end;
+  // }
 }
 .pantalla-der > * {
   grid-column: contenido-start / pantalla-end;
-  @include cel{
-    grid-column: contenido-start /contenido-end;
-  }
+  // @include cel{
+  //   grid-column: contenido-start /contenido-end;
+  // }
 }
