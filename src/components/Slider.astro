@@ -1,0 +1,151 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/tours/las-gatas/*"
+);
+const ruta1 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(1).jpg";
+const ruta2 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(2).jpg";
+const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
+---
+
+<div id="tour">
+  <div id="galeria" class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <li class="glide__slide">
+          <Image src={images[ruta1]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta2]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta3]()} alt={"titulo"} />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="info">
+    <div class="bandeja">
+      <h2>
+        Viaja de <span>Lázaro Cárdenas</span>
+        <br /> a Playa Las Gatas en Zihua
+      </h2>
+      <div id="slide" class="slide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <b>Inicio en Lázaro Cárdenas:</b> Comienza tu aventura en Avenida Reforma,
+              a un lado de la parroquia San José Obrero Lázaro Cárdenas, a tan solo
+              1 hora 20 minutos de Zihuatanejo. Aquí, nuestro equipo te recibirá
+              con una cálida bienvenida y te preparará para un día lleno de emociones.
+            </li>
+            <li class="glide__slide">
+              <b>Viaje por Carretera:</b> Relájate mientras te transportamos por
+              la pintoresca carretera hacia el muelle de Zihuatanejo. Disfruta del
+              paisaje y la compañía de otros aventureros que compartirán contigo
+              esta experiencia única.
+            </li>
+            <li class="glide__slide">
+              <b>Travesía en Lancha a Playa las Gatas:</b> Embarca en una emocionante
+              aventura marítima mientras te llevamos en lancha directamente a la
+              increíble Playa las Gatas. Siente la brisa del océano y maravíllate
+              con las vistas impresionantes que te esperan.
+            </li>
+            <li class="glide__slide">
+              <b>Bienvenida a Playa Las Gatas</b>: Al llegar a la playa, serás
+              recibido con una bebida de bienvenida que te ayudará a relajarte y
+              disfrutar al máximo de este paraíso terrenal.
+            </li>
+          </ul>
+        </div>
+
+        <div data-glide-el="controls">
+          <button data-glide-dir="<">Start</button>
+          <button data-glide-dir=">">End</button>
+        </div>
+      </div>
+      <a href="#" class="cta">reserva</a>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../estilos/_variables.scss";
+
+  #tour {
+    z-index: 400;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: $azul-marino;
+    color: #fff;
+    @include cel {
+        display: block;
+      grid-template-columns: 1fr;
+    }
+    h2 {
+        color: #fff;
+        span {
+            color: red;
+        }
+    }
+}
+#galeria {
+    grid-column: 0 / span 1;
+    width: 40vw;
+    img {
+        width: 100%;
+    }
+}
+#info {
+    width: 55vw;
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .bandeja {
+        max-width: 60%;
+    }
+}
+@include cel {
+    #galeria{
+        min-height: 40dvh
+    }
+    #info{
+      padding: 4rem 0;
+    }
+ #info, #galeria{
+    width: 100%;
+ }
+
+}
+</style>
+
+<script>
+  import Glide from "@glidejs/glide";
+
+  new Glide(".glide", {
+    autoplay: 4000,
+    hoverpause: false,
+    perView: 1,
+    gap: 0,
+    peek: {
+      before: 0,
+      after: 0,
+    },
+  }).mount();
+  new Glide(".slide", {
+    perView: 1,
+  }).mount();
+</script>
+<!-- glide -->
+<link
+  rel="stylesheet"
+  href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+/>
