@@ -73,6 +73,8 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
 
 <style lang="scss">
   @import "../estilos/_variables.scss";
+  @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+  @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 
   #tour {
     z-index: 400;
@@ -81,46 +83,46 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
     background-color: $azul-marino;
     color: #fff;
     @include cel {
-        display: block;
+      display: block;
       grid-template-columns: 1fr;
     }
     h2 {
-        color: #fff;
-        span {
-            color: red;
-        }
+      color: #fff;
+      span {
+        color: red;
+      }
     }
-}
-#galeria {
+  }
+  #galeria {
     grid-column: 0 / span 1;
     width: 40vw;
     img {
-        width: 100%;
+      width: 100%;
     }
-}
-#info {
+  }
+  #info {
     width: 55vw;
     grid-column: 2 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .bandeja {
-        max-width: 60%;
+      max-width: 60%;
     }
-}
-@include cel {
-    #galeria{
-        min-height: 40dvh
+  }
+  @include cel {
+    #galeria {
+      min-height: 40dvh;
     }
-    #info{
+    #info {
       padding: 4rem 0;
     }
- #info, #galeria{
-    width: 100%;
- }
-
-}
+    #info,
+    #galeria {
+      width: 100%;
+    }
+  }
 </style>
 
 <script>
@@ -141,11 +143,4 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
   }).mount();
 </script>
 <!-- glide -->
-<link
-  rel="stylesheet"
-  href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
-/>
-<link
-  rel="stylesheet"
-  href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
-/>
+
