@@ -28,6 +28,7 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
   </div>
   <div id="info">
     <div class="bandeja">
+        <a href="#" class="cta">reserva</a>
       <h2>
         Viaja de <span>Lázaro Cárdenas</span>
         <br /> a Playa Las Gatas en Zihua
@@ -58,15 +59,30 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
               recibido con una bebida de bienvenida que te ayudará a relajarte y
               disfrutar al máximo de este paraíso terrenal.
             </li>
+            <li class="glide__slide">
+                <b>Diversión Acuática con Snorkel:</b> Sumérgete en las aguas cristalinas de Playa las Gatas con nuestro equipo de snorkel incluido. Descubre la increíble vida marina que se esconde bajo la superficie y crea recuerdos inolvidables.
+            </li>
+            <li class="glide__slide">
+                <b>Exquisita Comida en "Las 3 Palmas":</b> Degusta una deliciosa comida en el reconocido restaurante "Las 3 Palmas". Disfruta de auténticos sabores locales mientras te relajas frente al mar.
+            </li>
+            
+            <li class="glide__slide">
+                <b>Opciones de Hospedaje:</b> Si deseas prolongar tu experiencia, te ofrecemos la opción de hospedarte en un encantador hotel ubicado en la misma playa. Despiértate con el sonido de las olas y vive la verdadera magia de Playa las Gatas.
+            </li>
+            <li class="glide__slide">
+                <b>Regreso Confortable:</b> Para aquellos que no desean hospedarse, te garantizamos un regreso seguro y cómodo a Lázaro Cárdenas después de las 5pm. Nuestro compromiso es brindarte una experiencia sin preocupaciones.
+            </li>
+            <li class="glide__slide">
+                <b>En Marioly Travel & Tours, creamos recuerdos inolvidables.</b> Únete a nosotros y descubre la belleza de Playa las Gatas de una manera única y emocionante. ¡Reserva tu aventura hoy mismo!
+            </li>
           </ul>
         </div>
 
         <div data-glide-el="controls">
-          <button data-glide-dir="<">Start</button>
-          <button data-glide-dir=">">End</button>
+          <button data-glide-dir=">"><img src="/der.svg" alt="boton derecha"> </button>
         </div>
       </div>
-      <a href="#" class="cta">reserva</a>
+ 
     </div>
   </div>
 </div>
@@ -75,6 +91,19 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
   @import "../estilos/_variables.scss";
   @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
   @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+  button{
+    background: $azul-marino;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 0;
+    img{
+        width: 40px;
+    }
+  }
+  b{
+    color: red;
+    font-size: 1.2rem;
+  }
 
   #tour {
     z-index: 400;
