@@ -41,6 +41,9 @@ h2 {
   font-size: clamp(2rem, 2.5vw, 3rem);
   padding-bottom: 1rem;
   color: $azul-marino;
+  span {
+    color: red;
+  }
 }
 h3 {
   font-family: "Noto Sans", sans-serif;
@@ -145,4 +148,77 @@ nav {
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
+}
+.video{
+  width: 75%;
+  padding: 4vw;
+  display: grid;
+  place-self: center;
+  @include cel{
+    width: 100%;
+  }
+  
+}
+video{
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
+  box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
+}
+
+#transporte{
+  position: relative;
+  height: 100%;
+  z-index: 200;
+  @include cel{
+    margin-top: 2rem;
+  }
+
+  &::before{
+    position: absolute;
+    content: "";
+    top: 10vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index:-1;
+    
+    background: url('/palma-bg.jpg'), linear-gradient(0deg, $beige 0%, rgba(247,247,247,0) 25%, rgba(255,255,255,0) 75%, $beige 100%);
+    background-repeat: no-repeat, repeat;
+    background-blend-mode: multiply, normal;
+    background-position: 0 150%, 0 0;
+    background-size: 45%, 100%;
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    @include cel{
+      top: 10vh;
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    }
+  }
+  .video, .bandeja{
+    z-index: 200;
+  }
+  .bandeja{
+    text-align:center;
+    margin: 4rem 0;
+  }
+  .conte{
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    @include cel{
+      flex-wrap: wrap;
+    }
+  }
+  .card{
+    p{
+      padding: 2rem;
+    }
+    h3{
+      padding: 2rem 2rem 0;
+      font-weight: bold;
+      color: $azul-marino;
+    }
+  }
+
 }
