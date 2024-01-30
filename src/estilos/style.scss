@@ -13,7 +13,6 @@ body {
   background-color: #fff;
   scroll-behavior: smooth;
   font-size: clamp(1rem, 18px, 4rem);
-
 }
 h1 {
   font-family: "Noto Sans", sans-serif;
@@ -78,9 +77,11 @@ nav {
       padding: 1rem;
     }
   }
-  @include cel{
+  @include cel {
     padding: 1rem 3rem;
-    ul{display: none;}
+    ul {
+      display: none;
+    }
   }
 }
 
@@ -121,7 +122,7 @@ nav {
     top: 0;
     right: 0;
     z-index: 0;
-    @include cel{
+    @include cel {
       top: 80%;
       height: 30%;
       width: 100%;
@@ -130,52 +131,51 @@ nav {
   }
   @include cel {
     flex-wrap: wrap;
-  .izq,
-  .der {
+    .izq,
+    .der {
       flex: 1 0 100%;
-      .bandeja{
+      .bandeja {
         width: 100%;
       }
     }
   }
 }
 
-.cta{
+.cta {
   background-color: red;
   color: #fff;
   border-radius: 2rem;
-  padding: .5rem 1.4rem;
+  padding: 0.5rem 1.4rem;
   font-weight: bold;
   display: inline-block;
   margin-top: 1rem;
 }
-.video{
+.video {
   width: 75%;
   padding: 4vw;
   display: grid;
   place-self: center;
-  @include cel{
+  @include cel {
     width: 100%;
   }
-  
 }
-video{
+video {
   width: 100%;
   height: auto;
-  -webkit-box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
-  -moz-box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
-  box-shadow: 0px 0px 16px 0px rgba(128,59,17,1);
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(128, 59, 17, 1);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(128, 59, 17, 1);
+  box-shadow: 0px 0px 16px 0px rgba(128, 59, 17, 1);
 }
 
-#transporte{
+#transporte {
   position: relative;
   height: 100%;
   z-index: 200;
-  @include cel{
+  @include cel {
     margin-top: 2rem;
   }
 
-  &::before{
+  &::before {
     position: absolute;
     content: "";
     top: 10vw;
@@ -183,42 +183,141 @@ video{
     width: 100%;
     height: 100%;
     // z-index:-1;
-    
-    background: url('/palma-bg.jpg'), linear-gradient(0deg, $beige 0%, rgba(247,247,247,0) 25%, rgba(255,255,255,0) 75%, $beige 100%);
+
+    background: url("/palma-bg.jpg"),
+      linear-gradient(
+        0deg,
+        $beige 0%,
+        rgba(247, 247, 247, 0) 25%,
+        rgba(255, 255, 255, 0) 75%,
+        $beige 100%
+      );
     background-repeat: no-repeat, repeat;
     background-blend-mode: multiply, normal;
     background-position: 0 150%, 0 0;
     background-size: 45%, 100%;
     clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
-    @include cel{
+    @include cel {
       top: 10vh;
       clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
     }
   }
-  .video, .bandeja{
+  .video,
+  .bandeja {
     z-index: 200;
   }
-  .bandeja{
-    text-align:center;
+  .bandeja {
+    text-align: center;
     margin: 4rem 0;
   }
-  .conte{
+  .conte {
     display: flex;
     gap: 2rem;
     margin-top: 3rem;
-    @include cel{
+    @include cel {
       flex-wrap: wrap;
     }
   }
-  .card{
-    p{
+  .card {
+    p {
       padding: 2rem;
     }
-    h3{
+    h3 {
       padding: 2rem 2rem 0;
       font-weight: bold;
       color: $azul-marino;
     }
   }
+}
+#lasgatas {
+  padding: 10vh 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index:-1;
 
+    background: linear-gradient(
+      0deg,
+      $gris 0%,
+      rgba(247, 247, 247, 0) 25%,
+      rgba(255, 255, 255, 0) 75%,
+      transparent 100%
+    );
+
+    clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);
+    @include cel {
+      top: 10vh;
+      clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    }
+  }
+
+  #bandeja {
+    display: flex;
+    position: relative;
+    height: 70dvh;
+    justify-content: center;
+    align-items: center;
+
+    #bebida {
+      position: absolute;
+      top: -20%;
+
+      right: 10%;
+      z-index: 300;
+      // mix-blend-mode:multiply;
+    }
+    #ima {
+      flex: 1;
+      text-align: center;
+    }
+  }
+  #conte {
+    flex: 1;
+    p:nth-child(2) {
+      padding-bottom: 2rem;
+    }
+    p:nth-child(4) {
+      padding-top: 2rem;
+    }
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+      li {
+        padding: 0.4rem;
+      }
+    }
+  }
+  @include cel {
+    #bandeja {
+      flex-wrap: wrap;
+      height: auto;
+      margin: 4rem 0;
+    }
+    #ima,
+    #conte {
+      flex: 1 0 100%;
+    }
+  }
+}
+#hospedate {
+  text-align: center;
+  #fotos {
+    display: flex;
+    @include cel{
+      flex-wrap: wrap;
+    }
+  }
+  .foto {
+    padding: 2rem 0;
+    flex: 1;
+    gap: 2rem;
+    @include cel{
+      flex: 1 0 100%;
+    }
+  }
 }
