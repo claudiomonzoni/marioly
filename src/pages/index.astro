@@ -139,7 +139,6 @@ import Slider from "../components/Slider.astro";
       </div>
 
       <div class="grid contenido">
-
         <div id="hospedate">
           <h2>Hospedate frente al mar</h2>
           <p>
@@ -148,48 +147,119 @@ import Slider from "../components/Slider.astro";
           <div id="fotos">
             <div class="foto">
               <img
-              src="/hotel-playa-las-gatas.png"
-              alt="hospedaje en playa las gatas"
+                src="/hotel-playa-las-gatas.png"
+                alt="hospedaje en playa las gatas"
               />
               <h3>Hospedaje frente a la playa</h3>
               <p>
                 Duerme a unos metros de <b
-                >la playa mas tranquila de Zihuatanejo</b
+                  >la playa mas tranquila de Zihuatanejo</b
                 >, despierta y escucha el sonido del mar, relajate y nada a solo
                 unos pasos de tu estancia.
               </p>
             </div>
             <div class="foto">
-            <img
-            src="/hotel-playa-las-gatas-cuarto.png"
-            alt="hospedaje en playa las gatas con comidida"
-            />
-            <h3>Comodidad</h3>
-            <p>
-              Goza de la naturaleza sin perder comodidad, los bungalows cuentas
-              con servicios que harán <b
-              >tu estancia muy comoda en medio del paraíso</b
-              >.
-            </p>
+              <img
+                src="/hotel-playa-las-gatas-cuarto.png"
+                alt="hospedaje en playa las gatas con comidida"
+              />
+              <h3>Comodidad</h3>
+              <p>
+                Goza de la naturaleza sin perder comodidad, los bungalows
+                cuentas con servicios que harán <b
+                  >tu estancia muy comoda en medio del paraíso</b
+                >.
+              </p>
+            </div>
+            <div class="foto">
+              <img
+                src="/hotel-playa-las-gatas-snorkel.png"
+                alt="hospedaje en playa las gatas"
+              />
+              <h3>Actividades en la playa</h3>
+              <p>
+                <b>Snorkel, paseo en banana, jet sky</b> son algunas de las actividades
+                que te ofrecemos.
+              </p>
+            </div>
           </div>
-          <div class="foto">
-            <img
-            src="/hotel-playa-las-gatas-snorkel.png"
-            alt="hospedaje en playa las gatas"
-            />
-            <h3>Actividades en la playa</h3>
-            <p>
-              <b>Snorkel, paseo en banana, jet sky</b> son algunas de las actividades
-              que te ofrecemos.
-            </p>
-          </div>
+          <img
+            id="pez"
+            src="/pez-marioly-ixtapa-zihuatanejo.png"
+            alt="snorkel y vida marina en playa las gatas"
+          />
         </div>
-        </div>
-        <img
-          src="/pez-marioly-ixtapa-zihuatanejo.png"
-          alt="snorkel y vida marina en playa las gatas"
-        />
       </div>
     </div>
+
+    <div id="reservaciones">
+      <h2>Reserva tu viaje hoy mismo</h2>
+      <p>
+        <b>Contáctanos para darte un presupuesto</b> y viaja a Ixtapa Zihuatanejo,
+        con comodidad
+      </p>
+
+      <div class="grid pantalla-izq">
+        <div class="bandeja">
+          <div id="portada">
+            <img
+              src="/contacto-collague-marioly-ixtapa-zihuatanejo.png"
+              alt=" reserva tu viaje a ixtapa zihuatanejo"
+            />
+          </div>
+          <div id="formu">
+            <div class="conte">
+              <label for="tour">Tour</label>
+              <select name="tour" id="tour">
+                <option value="Sentra">Tour Playa Las Gatas</option>
+              </select>
+              <label for="transporte">Transporte</label>
+              <select name="transporte" id="transporte">
+                <option value="Sentra">Nissan sentra 4 pasajeros</option>
+                <option value="Urban">Nissan Urban 14 pasajeros</option>
+                <option value="Hince">Toyota Hince 14 pasajeros</option>
+              </select>
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Nombre y apellido"
+              />
+              <label for="nombre">Numero de pasajeros</label>
+              <input type="number" name="pasajeros" id="pasajeros" />
+              <label for="llegada">fecha de llegada</label>
+              <input type="date" name="llegada" id="llegada" />
+              <label for="regreso">fecha de regreso</label>
+              <input type="date" name="regreso" id="regreso" />
+              <input type="submit" value="Enviar" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img src="/marioly-logo-footer.svg" alt="marioly tours a zihuatanejo">
+      <ul>
+        <li><b>email:</b> <a href="mailto:transportesmarioly@gmail.com">transportesmarioly@gmail.com</a></li>
+        <li><b>teléfono:</b> <a href="tel:7757128 4344">7757128 4344</a></li>
+        <li>
+
+          <address>
+            Avenida Reforma, a un lado de la parroquia San José Obrero, calle 2 de abril, Lázaro Cárdenas Mich.
+          </address>
+        </li>
+
+      </ul>
+      <ul>
+        <li>
+          <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook marioly"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp marioly"></a>
+        </li>
+      </ul>
+    </footer>
   </main>
 </Layout>

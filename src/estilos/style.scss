@@ -270,6 +270,11 @@ video {
       right: 10%;
       z-index: 300;
       // mix-blend-mode:multiply;
+      @include cel{
+        width: 230px;
+        right: 0%;
+        top: -30%;
+      }
     }
     #ima {
       flex: 1;
@@ -306,6 +311,7 @@ video {
 }
 #hospedate {
   text-align: center;
+  position: relative;
   #fotos {
     display: flex;
     @include cel{
@@ -319,5 +325,86 @@ video {
     @include cel{
       flex: 1 0 100%;
     }
+  }
+  .pez{
+    z-index: 300;
+  }
+}
+
+#reservaciones{
+  text-align: center;
+  padding: 3% 0;
+  .bandeja{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  #portada{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex: 1 0 50%;
+    background: url("/fondo-contacto-marioly-ixtapa-zihuatanejo.jpg") no-repeat;
+    background-size: 60% 100%;
+
+  }
+  #formu{
+    flex: 1 0 50%;
+    text-align: left;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    .conte{
+      width: 70%;
+    }
+  }
+  @include cel{
+   .bandeja{
+     flex-wrap: wrap;
+   }
+   #formu, #portada{
+    flex: 1 0 100%
+   }
+  }
+}
+
+input, select{
+  width: 100%;
+  background: $azul;
+  margin-bottom: 1rem;
+  border: none;
+  color: #fff;
+  padding: .7rem;
+  font-size: .9rem;
+  
+}
+input[type="submit"]{
+  background-color: red;
+  width: 50%;
+}
+::placeholder{
+  color: #fff;
+}
+label{
+  display: block;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+
+
+
+footer{
+  border-top: 1px $azul-marino solid;
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  ul{
+    margin: 0 2rem;
+  }
+  li{
+    padding-top: .5rem ;
   }
 }
