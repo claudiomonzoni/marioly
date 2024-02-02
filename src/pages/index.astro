@@ -209,16 +209,22 @@ import Slider from "../components/Slider.astro";
           </div>
           <div id="formu">
             <div class="conte">
-              <label for="tour">Tour</label>
-              <select name="tour" id="tour">
-                <option value="Sentra">Tour Playa Las Gatas</option>
+              
+              <label for="peseo">Selecciona un tour:</label>
+              <select name="paseo" id="paseo">
+                <option value="Troncones">Tour Troncones</option>
+                <option value="Las Gatas">Tour Playa Las Gatas</option>
               </select>
+
+
               <label for="transporte">Transporte</label>
               <select name="transporte" id="transporte">
                 <option value="Sentra">Nissan sentra 4 pasajeros</option>
                 <option value="Urban">Nissan Urban 14 pasajeros</option>
                 <option value="Hince">Toyota Hince 14 pasajeros</option>
               </select>
+
+              
               <label for="nombre">Nombre</label>
               <input
                 type="text"
@@ -226,13 +232,13 @@ import Slider from "../components/Slider.astro";
                 id="nombre"
                 placeholder="Nombre y apellido"
               />
-              <label for="nombre">Numero de pasajeros</label>
+              <label for="pasajeros">Numero de pasajeros</label>
               <input type="number" name="pasajeros" id="pasajeros" />
               <label for="llegada">fecha de llegada</label>
               <input type="date" name="llegada" id="llegada" />
               <label for="regreso">fecha de regreso</label>
               <input type="date" name="regreso" id="regreso" />
-              <input type="submit" value="Enviar" />
+              <input type="submit" id="enviar" value="Enviar" />
             </div>
           </div>
         </div>
@@ -240,24 +246,31 @@ import Slider from "../components/Slider.astro";
     </div>
 
     <footer>
-      <img src="/marioly-logo-footer.svg" alt="marioly tours a zihuatanejo">
+      <img src="/marioly-logo-footer.svg" alt="marioly tours a zihuatanejo" />
       <ul>
-        <li><b>email:</b> <a href="mailto:transportesmarioly@gmail.com">transportesmarioly@gmail.com</a></li>
+        <li>
+          <b>email:</b>
+          <a href="mailto:transportesmarioly@gmail.com"
+            >transportesmarioly@gmail.com</a>
+        </li>
         <li><b>teléfono:</b> <a href="tel:7757128 4344">7757128 4344</a></li>
         <li>
-
           <address>
-            Avenida Reforma, a un lado de la parroquia San José Obrero, calle 2 de abril, Lázaro Cárdenas Mich.
+            Avenida Reforma, a un lado de la parroquia San José Obrero, calle 2
+            de abril, Lázaro Cárdenas Mich.
           </address>
         </li>
-
       </ul>
       <ul>
         <li>
-          <a href="#" target="_blank"><img src="/facebook.svg" alt="facebook marioly"></a>
+          <a href="#" target="_blank"
+            ><img src="/facebook.svg" alt="facebook marioly" /></a
+          >
         </li>
         <li>
-          <a href="#" target="_blank"><img src="/whatsapp.svg" alt="whatsapp marioly"></a>
+          <a href="#" target="_blank"
+            ><img src="/whatsapp.svg" alt="whatsapp marioly" /></a
+          >
         </li>
       </ul>
     </footer>
