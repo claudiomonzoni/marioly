@@ -381,6 +381,7 @@ input, select{
 input[type="submit"]{
   background-color: red;
   width: 50%;
+  cursor: pointer;
 }
 ::placeholder{
   color: #fff;
@@ -407,4 +408,8 @@ footer{
   li{
     padding-top: .5rem ;
   }
+}
+.desactivado{
+opacity: .4;
+cursor:not-allowed!important;
 }

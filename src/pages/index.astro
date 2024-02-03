@@ -210,19 +210,19 @@ import Slider from "../components/Slider.astro";
           <div id="formu">
             <div class="conte">
               
-              <label for="peseo">Selecciona un tour:</label>
+              <label for="paseo">Selecciona un tour:</label>
               <select name="paseo" id="paseo">
                 <option value="Troncones">Tour Troncones</option>
                 <option value="Las Gatas">Tour Playa Las Gatas</option>
               </select>
-
-
-              <label for="transporte">Transporte</label>
-              <select name="transporte" id="transporte">
-                <option value="Sentra">Nissan sentra 4 pasajeros</option>
-                <option value="Urban">Nissan Urban 14 pasajeros</option>
-                <option value="Hince">Toyota Hince 14 pasajeros</option>
+             
+              <label for="transporte">Transporte:</label>
+              <select name="transporte" id="trans">
+                <option value="Nissan Sentra">Nissan sentra 4 pasajeros</option>
+                <option value="Nissan Urban">Nissan Urban 14 pasajeros</option>
+                <option value="Toyota Hince">Toyota Hince 14 pasajeros</option>
               </select>
+
 
               
               <label for="nombre">Nombre</label>
@@ -238,7 +238,8 @@ import Slider from "../components/Slider.astro";
               <input type="date" name="llegada" id="llegada" />
               <label for="regreso">fecha de regreso</label>
               <input type="date" name="regreso" id="regreso" />
-              <input type="submit" id="enviar" value="Enviar" />
+              <a href="#"  id="enviar" class="desactivado">Enviar</a>
+      
             </div>
           </div>
         </div>
