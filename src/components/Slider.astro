@@ -5,9 +5,16 @@ import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/tours/las-gatas/*"
 );
+
+
 const ruta1 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(1).jpg";
 const ruta2 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(2).jpg";
 const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
+const ruta4 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(4).jpg";
+const ruta5 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(5).jpg";
+const ruta6 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(6).jpg";
+const ruta7 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(7).jpg";
+const ruta8 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(8).jpg";
 ---
 
 <div id="tour">
@@ -22,6 +29,21 @@ const ruta3 = "/src/assets/tours/las-gatas/tour-playa-las-gatas(3).jpg";
         </li>
         <li class="glide__slide">
           <Image src={images[ruta3]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta4]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta5]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta6]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta7]()} alt={"titulo"} />
+        </li>
+        <li class="glide__slide">
+          <Image src={images[ruta8]()} alt={"titulo"} />
         </li>
       </ul>
     </div>
