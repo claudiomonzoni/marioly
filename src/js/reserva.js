@@ -45,7 +45,7 @@ const enviar = (e) => {
 const envio = ( whats, llegada, salida) => {
 
   const url = `
-  ${whats}Hola,%20me%20contacto%20desde%20marioly.com,%20deseo%20cotizar:%0aNombre:%20${nombre.value}%0aTour:%20${paseo.value},%0aNo.%20de%20pasajeros:%20${pasajeros.value},%0aTipo%0de%0transporte:%0${trans.value}%20%0aFecha%20del%20viaje:%20${llegada}%0aFecha%20de%20regreso:%20${salida}
+  ${whats}Hola,%20me%20contacto%20desde%20marioly.com,%20deseo%20cotizar:%0aNombre:%20${nombre.value}%0aTour:%20${paseo.value},%0aNo.%20de%20pasajeros:%20${pasajeros.value},%0aTipo%20de%20transporte:%20${trans.value}%20%0aFecha%20del%20viaje:%20${llegada}%0aFecha%20de%20regreso:%20${salida}
   %0aComentarios:%20
   `;
 

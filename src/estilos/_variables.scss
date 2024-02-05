@@ -72,7 +72,7 @@ $hdplus:1990px;
 }
 .pantalla-der > * {
   grid-column: contenido-start / pantalla-end;
-  // @include cel{
-  //   grid-column: contenido-start /contenido-end;
-  // }
+  @include cel{
+    grid-column: contenido-start /contenido-end;
+  }
 }
