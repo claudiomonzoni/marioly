@@ -70,6 +70,9 @@ nav {
   padding: 2rem 1rem;
   border-bottom: solid red 1px;
   z-index: 100;
+  img{
+    max-width: 300px;
+  }
   ul {
     justify-content: space-between;
     display: inherit;
@@ -415,6 +418,9 @@ footer{
   gap: 2rem;
   justify-content: space-around;
   align-items: center;
+  img{
+    max-width: 200px;
+  }
   ul{
     margin: 0 2rem;
   }
